@@ -29,4 +29,4 @@ add_test(NAME all
 include(CTest)
 
 set_property(TARGET ${CMAKE_PROJECT_NAME} PROPERTY ADDITIONAL_CLEAN_FILES
-  ${CMAKE_PROJECT_NAME}.dSYM Testing actual.txt actual.diff)
+  ${CMAKE_PROJECT_NAME}.dSYM _CPack_Packages Testing actual.txt)

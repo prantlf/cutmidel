@@ -35,6 +35,13 @@ Specify the text and the maximum count of leading and trailing characters. The o
     -V|--version  prints the version of the executable and exits
     -h|--help     prints the usage information and exits
 
+### Examples
+
+    $ cutmidel "~/Sources/private/cutmidel" 5 10
+    ~/Sou...e/cutmidel
+    $ cutmidel ~/Sources/private/cutmidel 0 12 ..
+    ..ate/cutmidel
+
 ## Build
 
 Make sure that you have Git client, C buildchain, GNU Make and CMake installed. Clone this repository, build, test and install the executable and manpage to the directory you choose:
