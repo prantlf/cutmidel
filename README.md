@@ -52,4 +52,6 @@ You can change the default build type and installation prefix too:
 
     cmake -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Release ..
 
+You can also build debug this project in VS Code with the C/C++ and CMake extensions.
+
 [available for download]: https://github.com/prantlf/cutmidel/releases
