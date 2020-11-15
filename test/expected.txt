@@ -1,0 +1,6 @@
+$ cutmidel Sources/private/cutmidel 5 10
+Sourc...e/cutmidel
+$ cutmidel Sources/private/cutmidel 12 0 ''
+Sources/priv
+$ cutmidel Sources/private/cutmidel 0 12 ..
+..ate/cutmidel

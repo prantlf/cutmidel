@@ -1,0 +1,2 @@
+#define cutmidel_VERMAJ @cutmidel_VERSION_MAJOR@
+#define cutmidel_VERMIN @cutmidel_VERSION_MINOR@

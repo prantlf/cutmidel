@@ -1,0 +1,45 @@
+.TH cutmidel "1" "November 14, 2020" "" "cutmidel manual"
+
+.SH NAME
+cutmidel - trims a text with an allipsis
+
+.SH SYNOPSIS
+.B cutmidel
+[-V|--version] [-h|--help]
+.I <leading>
+.I <trailing>
+.I [ellipsis]
+.RE
+
+.SH DESCRIPTION
+.B
+cutmidel trims a text to a maximum length by putting an allipsis to the middle of the shortened result.
+
+.SH OPTIONS
+.B
+.IP "-V, --version"
+prints the version of the executable and exits
+.B
+.IP "-h, --help"
+prints the usage information and exits
+
+.RE
+If no file name is provided, standard input will be read. If no source type
+is provided, it will be inferred from the file extension: ".os" -> object,
+".e" -> script, ".osx" -> dump. The source type object will enable the new
+OScript language and source type dump the old one by default.
+
+.SH EXAMPLES
+ $ cutmidel "~/Sources/private/cutmidel" 5 10
+ ~/Sou...e/cutmidel
+ $ cutmidel ~/Sources/private/cutmidel 0 12 ..
+ ..ate/cutmidel
+
+.SH BUGS
+cutmidel's bug tracker is located at <https://github.com/prantlf/cutmidel/issues>
+
+.SH DOCUMENTATION
+See the website for documentation <https://prantlf.github.io/cutmidel/>
+
+.SH AUTHOR
+Currently maintained by Ferdinand Prantl <prantlf@gmail.com>
