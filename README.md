@@ -1,6 +1,6 @@
 # cutmidel
 
-Trims a text to a maximum length by putting an allipsis to the middle of the shortened result.
+Trims a text to a maximum length by putting an ellipsis to the middle of the shortened result.
 
     $ cutmidel "~/Sources/private/cutmidel" 5 10
     ~/Sou...e/cutmidel
@@ -20,7 +20,7 @@ See also [shortpwd] if you want to shorten the current working directory.
 Binaries for the latest versions of Linux, OSX and Windows are [available for download]. The archives contain an executable and a manpage to be unpacked to a directory like `/usr/local`.
 
     bin/cutmidel
-    man/man1/cutmidel.1
+    share/man/man1/cutmidel.1
 
 Otherwise you can [build and install from sources](#build).
 
@@ -30,12 +30,10 @@ Otherwise you can [build and install from sources](#build).
 
 Specify the text and the maximum count of leading and trailing characters. The overall maximum length will be their sum plus the length of an ellipsis (3 dots by default). Zero for either leading or trailing count means no leading or trailing parts.
 
-## Options
+### Options
 
     -V|--version  prints the version of the executable and exits
     -h|--help     prints the usage information and exits
-
-[shortpwd]: https://github.com/prantlf/shortpwd
 
 ## Build
 
@@ -54,4 +52,5 @@ You can change the default build type and installation prefix too:
 
 You can also build debug this project in VS Code with the C/C++ and CMake extensions.
 
+[shortpwd]: https://github.com/prantlf/shortpwd
 [available for download]: https://github.com/prantlf/cutmidel/releases

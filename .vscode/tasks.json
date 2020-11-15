@@ -11,9 +11,11 @@
       "type": "shell",
       "label": "build",
       "group": { "kind": "build", "isDefault": true },
-      "command": "pwd",
+      "command": "clang",
       "options": { "cwd": "${workspaceFolder}/build" },
-      "args": [ "-o", "cutmidel", "../src/cutmidel.c", "-g" ],
+      "args": [
+        "-o", "cutmidel", "../src/cutmidel.c", "-I.", "-g"
+      ],
       "presentation": { "echo": true, "reveal": "always", "panel": "shared" },
       "problemMatcher": {
         "owner": "cpp", "fileLocation": [ "relative", "${workspaceRoot}/build" ],

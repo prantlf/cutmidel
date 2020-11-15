@@ -8,15 +8,15 @@ void usage() {
   printf(
     "cutmidel %d.%d\n"
     "  Shortens a text by trimming it by an ellipsis in the middle.\n\n"
-    "Usage: cutmidel [options] <text> <leading> <trailing>\n"
+    "Usage: cutmidel [options] <text> <leading> <trailing> [ellipsis]\n\n"
     "  Specify the text and the maximum count of leading and trailing\n"
     "  characters. The overall maximum length will be their sum plus\n"
-    "  the length of an ellipsis (3 characters). Zero for either leading\n"
+    "  the length of an ellipsis (3 dots by default). Zero for either leading\n"
     "  or trailing count means no leading or trailing parts.\n\n"
     "Options:\n"
     "  -V|--version  prints the version of the executable and exits\n\n"
-    "  -h|--help     prints th usage information and exits\n"
-    "Example:\n"
+    "  -h|--help     prints th usage information and exits\n\n"
+    "Examples:\n"
     "  $ cutmidel \"~/Sources/private/cutmidel\" 5 10\n"
     "  ~/Sou...e/cutmidel\n"
     "  $ cutmidel ~/Sources/private/cutmidel 0 12 ..\n"
@@ -36,7 +36,7 @@ int main (int argc, char * const * const argv) {
   }
   // check if printing the version number or usage information was requested
   if (argc == 2) {
-    char const *arg = argv[1];
+    char const * const arg = argv[1];
     if (strcmp(arg, "-V") == 0 || strcmp(arg, "--version") == 0) {
       printf("%d.%d", cutmidel_VERMAJ, cutmidel_VERMIN);
       return 0;

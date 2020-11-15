@@ -7,7 +7,7 @@ include_directories(${CMAKE_BINARY_DIR})
 add_executable(${CMAKE_PROJECT_NAME} src/${CMAKE_PROJECT_NAME}.c)
 
 install(TARGETS ${CMAKE_PROJECT_NAME} DESTINATION bin)
-install(FILES src/${CMAKE_PROJECT_NAME}.1 DESTINATION man/man1)
+install(FILES src/${CMAKE_PROJECT_NAME}.1 DESTINATION share/man/man1)
 
 if(WIN32 AND NOT UNIX)
   set(CPACK_GENERATOR "ZIP")

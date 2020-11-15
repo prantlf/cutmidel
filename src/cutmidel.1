@@ -1,19 +1,19 @@
-.TH cutmidel "1" "November 14, 2020" "" "cutmidel manual"
+.TH cutmidel "1" "November 15, 2020" "" "cutmidel manual"
 
 .SH NAME
-cutmidel - trims a text with an allipsis
+cutmidel - trims a text with an ellipsis
 
 .SH SYNOPSIS
 .B cutmidel
 [-V|--version] [-h|--help]
+.RS
+.I <text>
 .I <leading>
 .I <trailing>
 .I [ellipsis]
-.RE
 
 .SH DESCRIPTION
-.B
-cutmidel trims a text to a maximum length by putting an allipsis to the middle of the shortened result.
+cutmidel trims a text to a maximum length by putting an ellipsis to the middle of the shortened result.
 
 .SH OPTIONS
 .B
@@ -23,11 +23,11 @@ prints the version of the executable and exits
 .IP "-h, --help"
 prints the usage information and exits
 
-.RE
-If no file name is provided, standard input will be read. If no source type
-is provided, it will be inferred from the file extension: ".os" -> object,
-".e" -> script, ".osx" -> dump. The source type object will enable the new
-OScript language and source type dump the old one by default.
+.in
+Specify the text and the maximum count of leading and trailing
+characters. The overall maximum length will be their sum plus
+the length of an ellipsis (3 dots by default). Zero for either leading
+or trailing count means no leading or trailing parts.
 
 .SH EXAMPLES
  $ cutmidel "~/Sources/private/cutmidel" 5 10
