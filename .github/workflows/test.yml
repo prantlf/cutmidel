@@ -39,5 +39,5 @@ jobs:
         cmake --build . --config $BUILD_TYPE --verbose
     - name: Test
       working-directory: build
-      run: |
-        ctest -C $BUILD_TYPE --output-on-failure --verbose
+      if: "!startsWith(matrix.config.os, 'windows')"
+      run: ctest -C $BUILD_TYPE --output-on-failure --verbose
