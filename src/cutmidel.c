@@ -6,7 +6,7 @@
 
 void usage() {
   printf(
-    "cutmidel %d.%d\n"
+    "cutmidel %d.%d.%d\n"
     "  Shortens a text by trimming it by an ellipsis in the middle.\n\n"
     "Usage: cutmidel [options] <text> <leading> <trailing> [ellipsis]\n\n"
     "  Specify the text and the maximum count of leading and trailing\n"
@@ -20,7 +20,7 @@ void usage() {
     "  $ cutmidel \"~/Sources/private/cutmidel\" 5 10\n"
     "  ~/Sou...e/cutmidel\n"
     "  $ cutmidel ~/Sources/private/cutmidel 0 12 ..\n"
-    "  ..ate/cutmidel\n", cutmidel_VERMAJ, cutmidel_VERMIN
+    "  ..ate/cutmidel\n", cutmidel_VERMAJ, cutmidel_VERMIN, cutmidel_VERPAT
   );
 }
 
@@ -38,7 +38,7 @@ int main (int argc, char * const * const argv) {
   if (argc == 2) {
     char const * const arg = argv[1];
     if (strcmp(arg, "-V") == 0 || strcmp(arg, "--version") == 0) {
-      printf("%d.%d", cutmidel_VERMAJ, cutmidel_VERMIN);
+      printf("%d.%d.%d", cutmidel_VERMAJ, cutmidel_VERMIN, cutmidel_VERPAT);
       return 0;
     }
     if (strcmp(arg, "-h") == 0 || strcmp(arg, "--help") == 0) {
