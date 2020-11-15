@@ -3,11 +3,17 @@
   "tasks": [
     {
       "type": "shell",
+      "label": "configure",
+      "command": "mkdir -p build && cd build && cmake ..",
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
       "label": "build",
       "group": { "kind": "build", "isDefault": true },
-      "command": "clang",
+      "command": "pwd",
       "options": { "cwd": "${workspaceFolder}/build" },
-      "args": [ "-o", "cutmidel", "../cutmidel.c", "-g" ],
+      "args": [ "-o", "cutmidel", "../src/cutmidel.c", "-g" ],
       "presentation": { "echo": true, "reveal": "always", "panel": "shared" },
       "problemMatcher": {
         "owner": "cpp", "fileLocation": [ "relative", "${workspaceRoot}/build" ],

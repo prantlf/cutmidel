@@ -1,7 +1,5 @@
 # cutmidel
 
-![Status](https://github.com/prantlf/cutmidel/workflows/release/badge.svg)
-
 Trims a text to a maximum length by putting an allipsis to the middle of the shortened result.
 
     $ cutmidel "~/Sources/private/cutmidel" 5 10
@@ -19,18 +17,12 @@ See also [shortpwd] if you want to shorten the current working directory.
 
 ## Installation
 
-Make sure that you have Git client, C buildchain, GNU Make and CMake installed. Clone this repository, build, test and install the executable and manpage to the directory you choose:
+Binaries for the latest versions of Linux, OSX and Windows are [available for download]. The archives contain an executable and a manpage to be unpacked to a directory like `/usr/local`.
 
-    git clone https://github.com/prantlf/cutmidel.git
-    cd cutmidel
-    mkdir build
-    cd build
-    cmake ..
-    make test install
+    bin/cutmidel
+    man/man1/cutmidel.1
 
-You can change the default build type and installation prefix too:
-
-    cmake -DCMAKE_INSTALL_PREFIX=/usr/local  -DCMAKE_BUILD_TYPE=Release ..
+Otherwise you can [build and install from sources](#build).
 
 ## Usage
 
@@ -44,3 +36,20 @@ Specify the text and the maximum count of leading and trailing characters. The o
     -h|--help     prints the usage information and exits
 
 [shortpwd]: https://github.com/prantlf/shortpwd
+
+## Build
+
+Make sure that you have Git client, C buildchain, GNU Make and CMake installed. Clone this repository, build, test and install the executable and manpage to the directory you choose:
+
+    git clone https://github.com/prantlf/cutmidel.git
+    cd cutmidel
+    mkdir build
+    cd build
+    cmake ..
+    make all test install
+
+You can change the default build type and installation prefix too:
+
+    cmake -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Release ..
+
+[available for download]: https://github.com/prantlf/cutmidel/releases
