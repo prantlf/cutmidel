@@ -17,6 +17,15 @@ See also [shortpwd] if you want to shorten the current working directory.
 
 ## Installation
 
+Mac users can use [Homebrew]:
+
+    brew install prantlf/tap/cutmidel
+
+Windows users can use [Scoop]:
+
+    scoop bucket add prantlf https://github.com/prantlf/scoop-bucket.git
+    scoop install prantlf/cutmidel
+
 Binaries for the latest versions of Linux, OSX and Windows are [available for download]. The archives contain an executable and a manpage to be unpacked to a directory like `/usr/local`.
 
     bin/cutmidel
@@ -61,3 +70,5 @@ You can also build debug this project in VS Code with the C/C++ and CMake extens
 
 [shortpwd]: https://github.com/prantlf/shortpwd
 [available for download]: https://github.com/prantlf/cutmidel/releases
+[Homebrew]: https://brew.sh/
+[Scoop]: https://scoop.sh/
