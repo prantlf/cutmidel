@@ -3,7 +3,7 @@
 ## 1.0.3
 
 * Enable static builds on non-Mac platforms.
-* Include the windows executabnle in the release archive.
+* Include the windows executable in the release archive.
 
 ## 1.0.2
 
